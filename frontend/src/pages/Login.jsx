@@ -53,7 +53,6 @@ const Login = () => {
 
     setLoginError("");
 
-    // Only check if fields are filled
     if (!hasRequiredFields()) {
       setLoginError("Please fill in all required fields.");
       return;

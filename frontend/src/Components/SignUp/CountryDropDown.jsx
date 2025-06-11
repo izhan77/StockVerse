@@ -38,7 +38,6 @@ const CountryDropdown = ({
 
   const handleChange = (e) => {
     const selectedValue = e.target.value;
-    // Pass the string value directly - no parseInt needed
     onChange(selectedValue || "");
   };
 

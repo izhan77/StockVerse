@@ -47,7 +47,6 @@ const EmployeeSignUpForm = ({ roleNumber }) => {
   const handleUser = (e) => {
     const { name, value } = e.target;
 
-    // Clear any previous submit error when user starts typing
     if (submitError) {
       setSubmitError("");
     }
@@ -221,7 +220,6 @@ const EmployeeSignUpForm = ({ roleNumber }) => {
       if (field === "country_id") {
         return user[field] && user[field] !== "";
       }
-      // For other fields, check if they're not empty after trimming
       return user[field] && user[field].toString().trim() !== "";
     });
   };

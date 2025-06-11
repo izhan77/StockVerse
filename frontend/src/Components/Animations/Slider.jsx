@@ -9,7 +9,6 @@ const Slider = () => {
   const name = state?.user?.first_name;
   const id = state?.user?.user_id;
   const token = localStorage.getItem("token");
-  // console.log("Slider - ", token)
 
   // Slider Slide
   useEffect(() => {

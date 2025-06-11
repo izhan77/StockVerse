@@ -22,6 +22,8 @@ app.use(cookieParser());
 
 //////////////////////////////////////////////////////////////////
 
+// ROUTES
+
 // Fetching Countries
 app.get("/countries", async (req, res) => {
   try {

@@ -24,10 +24,21 @@ const SignUpPage1 = () => {
   };
 
   const handleContinue = () => {
-    if (role && role != "tax-inspector") {
+    if (
+      role &&
+      role != "tax-inspector" &&
+      role != "manager" &&
+      role != "auditor"
+    ) {
       navigate("/signup-page2", { state: { role, roleNumber } });
     } else if (role === "tax-inspector") {
       alert("Tax-Inspection Form in Progress!");
+      navigate("/signup-page1");
+    } else if (role === "manager") {
+      alert("Manager Form in Progress!");
+      navigate("/signup-page1");
+    } else if (role === "auditor") {
+      alert("Auditor Form in Progress!");
       navigate("/signup-page1");
     } else {
       alert("Please Select a Role to Continue....");
