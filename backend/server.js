@@ -460,6 +460,10 @@ app.get("/purchaseorder/:store_id/:user_id", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("StockVerse API is running 🚀");
+});
+
 //////////////////////////////////////////////////////////////////
 
 const PORT = process.env.PORT;
