@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import API_BASE_URL from "../../config";
+import API_BASE_URL from "../../config/api";
 
 const useSalesData = (storeId, token) => {
   const [salesData, setSalesData] = useState(null);

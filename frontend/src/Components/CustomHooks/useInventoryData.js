@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import API_BASE_URL from "../../config";
+import API_BASE_URL from "../../config/api";
 
 const useInventoryData = (storeId, token) => {
   const [inventoryData, setInventoryData] = useState(null);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import API_BASE_URL from "../../config";
+import API_BASE_URL from "../../config/api";
 
 const useDashboardData = (userID, token) => {
   const [dashboardData, setDashboardData] = useState(null);

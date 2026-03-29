@@ -7,7 +7,7 @@ import PurchaseOrder from "./PurchaseOrder";
 import ButtonLoading from "./../Animations/ButtonLoading";
 import Activity from "./Activity";
 import { useRef } from "react";
-import API_BASE_URL from "../../config";
+import API_BASE_URL from "../../config/api";
 
 const DashBoardOverview = ({ user }) => {
   const [dashboardData, setDashboardData] = useState(null);
