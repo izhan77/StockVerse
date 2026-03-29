@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { EyeClosed, Eye } from "lucide-react";
 import LoginButton from "./../Components/Buttons/LoginButton";
-import { API_BASE_URL } from "../config/api";
+import API_BASE_URL  from "../config/api";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
