@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Submit from "../Buttons/Submit";
 import CountryDropdown from "../SignUp/CountryDropDown";
-import { API_BASE_URL } from "../../config";
+import { API_BASE_URL } from "../../config/api";
 
 const EmployeeSignUpForm = ({ roleNumber }) => {
   const [user, setUser] = useState({
