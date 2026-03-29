@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import Submit from "../Buttons/Submit";
 import CountryDropdown from "../SignUp/CountryDropDown";
+import { API_BASE_URL } from "../../config";
 
 const EmployeeSignUpForm = ({ roleNumber }) => {
   const [user, setUser] = useState({
@@ -262,9 +263,9 @@ const EmployeeSignUpForm = ({ roleNumber }) => {
 
       console.log("Sending userData:", userData);
 
-      console.log("Sending request to http://localhost:5000/users");
+      console.log("Sending request to " + `${API_BASE_URL}/users`);
 
-      const response = await fetch("http://localhost:5000/users", {
+      const response = await fetch(`${API_BASE_URL}/users`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

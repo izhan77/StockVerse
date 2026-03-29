@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import { EyeClosed, Eye } from "lucide-react";
 import LoginButton from "./../Components/Buttons/LoginButton";
+import { API_BASE_URL } from "../config";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -72,9 +73,7 @@ const Login = () => {
         password: "[HIDDEN]",
       });
 
-      console.log("Sending request to http://localhost:5000/login");
-
-      const response = await fetch("http://localhost:5000/login", {
+      const response = await fetch(`${API_BASE_URL}/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

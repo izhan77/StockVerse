@@ -7,6 +7,7 @@ import PurchaseOrder from "./PurchaseOrder";
 import ButtonLoading from "./../Animations/ButtonLoading";
 import Activity from "./Activity";
 import { useRef } from "react";
+import API_BASE_URL from "../../config";
 
 const DashBoardOverview = ({ user }) => {
   const [dashboardData, setDashboardData] = useState(null);
@@ -52,7 +53,7 @@ const DashBoardOverview = ({ user }) => {
     const fetchDashboardData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/dashboard/${userID}`,
+          `${API_BASE_URL}/dashboard/${userID}`,
           {
             method: "GET",
             credentials: "include",
@@ -86,7 +87,7 @@ const DashBoardOverview = ({ user }) => {
 
         setInventoryLoading(true);
         const response = await fetch(
-          `http://localhost:5000/inventory/${dashboardData.store.id}`,
+          `${API_BASE_URL}/inventory/${dashboardData.store.id}`,
           {
             method: "GET",
             headers: {
@@ -121,7 +122,7 @@ const DashBoardOverview = ({ user }) => {
 
         setInventoryLoading(true);
         const response = await fetch(
-          `http://localhost:5000/storesales/${dashboardData.store.id}`,
+          `${API_BASE_URL}/storesales/${dashboardData.store.id}`,
           {
             method: "GET",
             headers: {
@@ -156,7 +157,7 @@ const DashBoardOverview = ({ user }) => {
 
         setInventoryLoading(true);
         const response = await fetch(
-          `http://localhost:5000/employeesales/${userID}`,
+          `${API_BASE_URL}/employeesales/${userID}`,
           {
             method: "GET",
             headers: {
@@ -191,7 +192,7 @@ const DashBoardOverview = ({ user }) => {
         setInventoryLoading(true);
 
         const response = await fetch(
-          `http://localhost:5000/activity/${userID}`,
+          `${API_BASE_URL}/activity/${userID}`,
           {
             method: "GET",
             headers: {
@@ -224,7 +225,7 @@ const DashBoardOverview = ({ user }) => {
         setInventoryLoading(true);
 
         const response = await fetch(
-          `http://localhost:5000/purchaseorder/${storeID}/${userID}`,
+          `${API_BASE_URL}/purchaseorder/${storeID}/${userID}`,
           {
             method: "GET",
             headers: {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import API_BASE_URL from "../../config";
 
 const useSalesData = (storeId, token) => {
   const [salesData, setSalesData] = useState(null);
@@ -10,7 +11,7 @@ const useSalesData = (storeId, token) => {
       if (!storeId) return;
       try {
         setLoading(true);
-        const res = await fetch(`http://localhost:5000/storesales/${storeId}`, {
+        const res = await fetch(`${API_BASE_URL}/storesales/${storeId}`, {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

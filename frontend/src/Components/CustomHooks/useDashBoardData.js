@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import API_BASE_URL from "../../config";
 
 const useDashboardData = (userID, token) => {
   const [dashboardData, setDashboardData] = useState(null);
@@ -8,7 +9,7 @@ const useDashboardData = (userID, token) => {
     const fetchDashboardData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:5000/dashboard/${userID}`,
+          `${API_BASE_URL}/dashboard/${userID}`,
           {
             method: "GET",
             credentials: "include",

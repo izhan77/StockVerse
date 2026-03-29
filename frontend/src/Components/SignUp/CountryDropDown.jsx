@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { API_BASE_URL } from "../../config";
 
 const CountryDropdown = ({
   value,
@@ -16,7 +17,7 @@ const CountryDropdown = ({
     const fetchCountries = async () => {
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:5000/countries");
+        const response = await fetch(`${API_BASE_URL}/countries`);
 
         if (!response.ok) {
           throw new Error("Failed to fetch countries");
